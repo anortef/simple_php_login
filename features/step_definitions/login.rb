@@ -3,17 +3,17 @@ Given(/^I am on the login page$/) do
 end
 
 When(/^I input the correct username$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  find_field("username").set("test")
 end
 
 When(/^the correct password$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  find_field("password").set("test")
 end
 
 When(/^click the login button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button('submit')
 end
 
 Then(/^I should see a correct login message$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('login successful')
 end

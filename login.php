@@ -13,7 +13,7 @@ $fileUserName =  $parsedcontents[0];
 $filePassword = $parsedcontents[1];
 
 if($userName == $fileUserName AND $pass == $filePassword){
-    echo "login successfull";
+    echo "login successful";
 } else {
     echo "incorrect username or password";
 }

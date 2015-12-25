@@ -5,7 +5,8 @@ require 'capybara/cucumber'
 require 'test/unit/assertions'
 require 'mechanize'
 
-World(Test::Unit::Assertions)
-Capybara.default_driver = :mechanize
-Capybara.app_host = "http://localhost:63342"
-World(Capybara)
+Capybara.configure do |config|
+    config.app = "fake"
+    config.default_driver = :mechanize
+    config.app_host = "http://localhost:63342"
+end

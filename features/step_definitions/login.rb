@@ -17,3 +17,11 @@ end
 Then(/^I should see a correct login message$/) do
   expect(page).to have_content('login successful')
 end
+
+When(/^a incorrect password$/) do
+  find_field("password").set("datest")
+end
+
+Then(/^I should see a failed login message$/) do
+  expect(page).to have_content('incorrect username or password')
+end
